@@ -61,23 +61,71 @@ img{
 .fa-play-circle{
 	margin-top: 15px;
 	color: white;
-	-webkit-transition: color .5s;
+	-webkit-transition: all .5s;
 }
 
-.fa-play-circle:hover{
+#main-content .fa-play-circle:hover{
 	cursor: pointer;
-	color: #777;
-}
-
-.fa-play-circle:hover + #play-again-text{
-	color: #777;
+	font-size: 6em;
 }
 
 #play-again-text{
 	color: white;
 	margin-top: 20px;
 	display: none;
-	-webkit-transition: color .5s;
+	-webkit-transition: all .5s;
+}
+
+/*==========MEDIA QUERIES==========*/
+
+/*Tablets*/
+@media only screen and (max-width: 768px){
+	#large-words{
+		font-size: 80px;
+	}
+
+	#wrong-image-container{
+		height: 70vw;
+		width: 70vw;
+		border-radius: 35vw;
+	}
+}
+
+/*Phones*/
+@media only screen and (max-width: 480px){
+	#large-words{
+		font-size: 60px;
+	}
+
+	#main-content .fa-hourglass, #main-content .fa-play-circle{
+		font-size: 60px;
+	}
+
+	#main-content .fa-play-circle:hover{
+		font-size: 70px;
+	}
+	
+	#wrong-image-container{
+		border: 10px solid white;
+	}
+
+	#wrong-image{
+		bottom: 10px;
+		right: 10px;
+	}
+
+	#average-time, #rounds-left{
+		font-size: 25px;
+	}
+
+	#average-time{
+		margin-top: 15px;
+	}
+
+	#play-again-text{
+		margin-top: 5px;
+	}
+
 }
 
 
